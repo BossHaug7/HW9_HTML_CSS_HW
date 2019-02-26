@@ -1,130 +1,80 @@
-<!-- Visualization Page - Max Temperature -->
-
 <!DOCTYPE html>
-<html lang="us-en">
+<html>
 
-  <head>
+<head>
+    <title>Lattitude VS Max Temp</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <!--encoding-->
-    <meta charset="UTF-8">
+</head>
 
-    <!--page title-->
-    <title>Bootstrap Visualization Dashboard</title>
+<body>
 
-    <!--stylesheets-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../reset.css">
-    <link rel="stylesheet" href="../style.css">
-
-  </head>
-
-  <body>
-
-    <!--navbar-->
-    <nav class="navbar navbar-default">
-      <div class="navbar-container container-fluid">
-
-        <!-- brand and toggle -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!--site name-->
-          <a class="navbar-brand" href="../index.html" style="color: white;">Lattitude</a>
-        </div>
-    
-        <!-- nav dropdown and links -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-
-            <!-- large screen dropdown -->
-            <li class="dropdown" id="large-screen-dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="./temp.html">Max Temperature</a></li>
-                <li><a href="./humidity.html">Humidity</a></li>
-                <li><a href="./cloudiness.html">Cloudiness</a></li>
-                <li><a href="./wind-speed.html">Wind Speed</a></li>
-              </ul>
-            </li>
-
-            <!-- small screen dropdown -->
-            <a href="#" class="mobile-button" id="small-screen-dropdown" role="button">Plots<span class="caret"></span></a>
-            <ul class="nav navbar-nav mobile-menu" id="small-screen-dropdown-list">
-              <li><a href="./temp.html">Max Temperature</a></li>
-              <li><a href="./humidity.html">Humidity</a></li>
-              <li><a href="./cloudiness.html">Cloudiness</a></li>
-              <li><a href="./wind-speed.html">Wind Speed</a></li>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://u9510136.github.io/lattitude/index.html">Lattitude</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Plots
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="./visual_1.html">Max Temp</a></li>
+                            <li><a href="./visual_2.html">Humidity</a></li>
+                            <li><a href="./visual_3.html">Cloudness</a></li>
+                            <li><a href="./visual_4.html">Wind Speed</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="./comp.html">Comparison</a></li>
+                <li><a href="./data.html">Data</a></li>
             </ul>
-
-            <li><a href="../comparison.html">Comparison</a></li>
-            <li><a href="../data.html">Data</a></li>
-          </ul>
         </div>
-        
-      </div><!-- /.container-fluid -->
     </nav>
 
-    <!-- content -->
-    <div class="content-container container-fluid">
-      <div class="row">
 
-        <!-- main content -->
-        <main class="col-md-7 col-xs-12">
-          <div class="main-padding">
-            <h1 class="header">Max Temperature</h1>
-            <hr>
-            <section class="main-content">
-              <img class="main-image-nonfloat" src="../Resources/assets/images/Fig1.png" alt="cloudiness vs latitude">
-              <p>As expected, the weather becomes much warmer as one approaches the equator (0 degree latitude). Temperature in this near-equator region is known to be consistently high throughout the year. More interestingly, the temperature distribution is almost symmetric over ~20 degrees latitude, with the highest temperature occurs near 20 degrees latitude. This is due to the slight tilt of the earth at the time of the year when data were gathered. Note that at higher latitudes, the southern hemisphere is slightly warmer than the northern hemisphere, even though the time already passes spring equinox. This is due to the lagging when temperature adjusts to Earth's tilt over time.</p>
-            </section>
-          </div>
-        </main>
+    <div class="col-sm-6 col-md-7">
+        <div class="box_1">
+            <h1 class="page-header">Lattitude vs Max Temperature</h1>
+            <br>
+            <img src="./assets/images/Fig1.png" alt="Lattitude vs Max temp" height="330" width="480">
+            <p class="category">Latitude is the measurement of the distance of a location on the Earth from the equator.
+                From the Latitude vs Max Temperature chart, we can see that latitude is one of the main factors affecting temperature.
+                The cities located between latitude from -20 to 20 have the highest temperatures.
+                The further away from the equator the city temperature become lower.
+                The northern temperature ranges are greater than the southern ranges at corresponding latitudes.
+                The relative difference in the northern and southern hemispheres is greatest around 60° latitude
+                where the southern hemisphere has almost no land on the earth.
+                To sum, places at high latitudes are colder than at low latitudes.
+            </p>
 
-        <!-- side content -->
-        <side class="col-md-5 col-xs-12">
-          <div class="side-padding">
-            <h2 class="header">Visualizations</h2>
-            <hr>
-            <section class="container-fluid">
-              <div class="row side-row">
-                <div class="col-md-6 col-xs-3 side-highlight">
-                  <a href="./temp.html">
-                    <img src="../Resources/assets/images/Fig1.png" alt="max temperature vs latitude" class="side-image">
-                  </a>
-                </div>
-                <div class="col-md-6 col-xs-3">
-                  <a href="./humidity.html">
-                    <img src="../Resources/assets/images/Fig2.png" alt="humidity vs latitude" class="side-image">
-                  </a>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-md-6 col-xs-3">
-                  <a href="./cloudiness.html">
-                    <img src="../Resources/assets/images/Fig3.png" alt="cloudiness vs latitude" class="side-image">
-                  </a>
-                </div>
-                <div class="col-md-6 col-xs-3">
-                  <a href="./wind-speed.html">
-                    <img src="../Resources/assets/images/Fig4.png" alt="wind speed vs latitude" class="side-image">
-                  </a>
-                </div>
-              </div>
-            </section>
-          </div>
-        </side>
-
-      </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-5">
+        <div class="box_2">
+            <h1 class="page-header">Visualizations</h1>
+            <a href="./visual_1.html">
+                <img src="assets/images/Fig1.png" alt="Lattitude vs Max temp" height="150" width="150"
+                    class="box_img"></a>
+            <a href="./visual_2.html">
+                <img src="assets/images/Fig2.png" alt="Lattitude vs Humidity" height="150" width="150"
+                    class="box_img"></a>
+            <a href="./visual_3.html">
+                <img src="assets/images/Fig3.png" alt="Lattitude vs Cloudness" height="150" width="150"
+                    class="box_img"></a>
+            <a href="./visual_4.html">
+                <img src="assets/images/Fig4.png" alt="Lattitude vs Wind Speed" height="150" width="150"
+                    class="box_img"></a>
+        </div>
     </div>
 
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
-  </body>
+</body>
 
 </html>
